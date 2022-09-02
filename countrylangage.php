@@ -36,18 +36,18 @@ mysqli_close($link);
     <table class="table">
       <thead>
           <th>CountryCode</th>
-          <th>CountryCode</th>
+          <th>Language</th>
       </thead>
       <tbody>
         <?php while($row = mysqli_fetch_assoc($result)){ ?>
             <tr>
-                <td><?php echo $row['ID']; ?></td>
-                <td><?php echo $row['Name']; ?></td>
                 <td><?php echo $row['CountryCode']; ?></td>
+                <td><?php echo $row['Language']; ?></td>
             </tr>
         <?php } ?>
       </tbody>
     </table>
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
