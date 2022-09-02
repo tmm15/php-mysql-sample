@@ -11,7 +11,7 @@ if(!$link) {
 }
 
 //SQL文を生成
-$query = "SELECT CountryCode , Language FROM countrylanguage ORDER BY CountryCode LIMIT 30";
+$query = "SELECT ID, Name, CountryCode FROM city ORDER BY ID LIMIT 30";
 
 //SQL文を実行、結果を変数に格納
 $result = mysqli_query($link, $query);
@@ -35,8 +35,9 @@ mysqli_close($link);
     <body>
     <table class="table">
       <thead>
-          <th>CountryCode</th>
-          <th>CountryCode</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>CountryCode</th>
       </thead>
       <tbody>
         <?php while($row = mysqli_fetch_assoc($result)){ ?>
